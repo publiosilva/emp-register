@@ -35,9 +35,9 @@ const actions = {
     const { employee } = state;
 
     try {
-      await employeeService.create(employee);
+      const { data } = await employeeService.create(employee);
 
-      commit('createEmployee', employee);
+      commit('createEmployee', data);
     } catch (error) {
       console.log('error', error);
     }
@@ -46,7 +46,7 @@ const actions = {
     const { employee } = state;
 
     try {
-      await employeeService.update(employee);
+      await employeeService.update({ ...employee });
 
       commit('updateEmployee', employee);
     } catch (error) {

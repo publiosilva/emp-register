@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Employees from '../views/Employees.vue';
+import Employees from '../views/employees/Employees.vue';
 
 Vue.use(VueRouter);
 
